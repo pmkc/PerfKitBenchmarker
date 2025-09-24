@@ -28,7 +28,7 @@ ENV PATH=$PATH:/bin/google-cloud-sdk/bin
 # Install pkb following instructions: https://github.com/GoogleCloudPlatform/PerfKitBenchmarker
 ENV HOME /root
 WORKDIR $HOME
-RUN git clone https://github.com/GoogleCloudPlatform/PerfKitBenchmarker.git
+RUN git clone https://github.com/pmkc/PerfKitBenchmarker.git --branch test_coercion --single-branch
 RUN python3 -m pip install -r $HOME/PerfKitBenchmarker/requirements.txt
 
 # Run PKB directly, example:

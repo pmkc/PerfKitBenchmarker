@@ -398,6 +398,7 @@ class ContainerClusterSpec(spec.BaseSpec):
     vm_spec_class = virtual_machine.GetVmSpecClass(
         self.cloud, provider_info.DEFAULT_VM_PLATFORM
     )
+    print('ZZZ', vm_spec_class, self.cloud, vm_config, self.vm_spec)
     self.vm_spec = vm_spec_class(
         '{}.vm_spec.{}'.format(component_full_name, self.cloud),
         flag_values=flag_values,

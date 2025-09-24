@@ -544,6 +544,7 @@ class GceVirtualMachine(virtual_machine.BaseVirtualMachine):
           at least one of "cpus" or "memory".
     """
     super().__init__(vm_spec)
+    assert isinstance(vm_spec, GceVmSpec)
     self.create_cmd: util.GcloudCommand = None
     self.boot_metadata = {}
     self.boot_metadata_from_file = {}
